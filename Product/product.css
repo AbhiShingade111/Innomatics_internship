@@ -1,0 +1,71 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(65, 65, 202), rgb(209, 46, 201));
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card{
+    height: 420px!important;
+    margin: 20px;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 25px rgb(24, 24, 122);
+    transition: all 0.3s ease-in-out;
+}
+
+.card img{
+    height: 150px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.my-btn{
+    width: 90%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.prodCard{
+    color: white;
+}
+
+.prodimg{
+    width: 300px;
+    height: 400px;
+}
+
+.prodHead{
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 3px 3px 2px gray;
+}
+
+.prodDesc{
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+@media (min-width: 1400px){
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card{
+        height: 500px!important;
+    }
+
+    .card h5{
+        font-size: 15px;
+    }
+
+    .card img{
+        padding: 10px;
+    }
+}
