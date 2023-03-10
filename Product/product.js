@@ -25,7 +25,7 @@ console.log("ProductList", productList)
 function createProductCard(Prods) {
     Prods.forEach((prod) => {
         const ca = document.createElement("div")
-        ca.classList.add("card", "position-relative", "col-lg-4", "col-md-6", "col-sm-8", "col-8", "col-xxl-3")
+        ca.classList.add("card", "position-relative", "col-lg-4", "col-md-5", "col-sm-8", "col-8", "col-xxl-3")
         ca.setAttribute("category",prod.category)
 
         const im = document.createElement("img")
@@ -85,8 +85,6 @@ function fetchDataByCategory(e) {
     con2.style.display = "none";
     const c = document.querySelectorAll(".card")
     c.forEach((prod) => {
-        //console.log(prod.getAttribute("category"))
-        //console.log(prod.innerText.toLoweCase().includes(category.toLoweCase()))
         if (category == 'all') {
             prod.style.display = "block";
         } else if (prod.getAttribute("category") == category) {
@@ -100,24 +98,12 @@ function fetchDataByCategory(e) {
 function showProducts(prods) {
 
     prods.forEach((prod_obj) => {
-        // console.log(prod_obj)
-        //    con.style.display = "none";
-        //    con2.style.display = "block";
-        // const ele = document.createElement("div")
-        // ele.classList.add("row", "d-flex", "justify-content-between")
-        // ele.style.display = "none"
-        // ele.setAttribute("id",prod_obj.id)
-
-
-
-
         const pr = document.createElement("div")
         pr.classList.add("prodCard")
         pr.setAttribute("id",prod_obj.id)
         pr.style.display = "none";
 
         const div = document.createElement("div")
-        // div.classList.add("col-12", "col-lg-6", "col-md-6", "col-sm-12")
         div.classList.add("col-12")
 
         const prodheader = document.createElement("h2")
@@ -149,7 +135,6 @@ function showProducts(prods) {
         div.appendChild(prodCount)
 
         const div2 = document.createElement("div")
-        //div2.classList.add("col-12", "col-lg-6", "col-md-6", "col-sm-12")
         div2.classList.add("col-12","text-center")
 
         const prodImage = document.createElement("img")
